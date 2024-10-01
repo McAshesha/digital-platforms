@@ -19,11 +19,12 @@ asect  0x00            # Start a new section at memory address 0x00
 	ldi r0, a          # Reload the original address of label 'a' into register r0 (optional depending on the context)
     halt               # Halt the execution of the program
 
+asect 0x20             # Start a new section at memory address 0x20
+
 a:
 	ds 4               # Define storage (reserve space) for 4 bytes starting from address 'a'
 	
-	
-asect 0x20             # Start a new section at memory address 0x20
+asect 0x30             # Start a new section at memory address 0x30
 
 dc 13, 0x45, 0b11001101, "A"  # Define constants: 13, 0x45, 11001101, and ASCII "A" in consecutive memory locations
 
